@@ -1,5 +1,5 @@
 {
-  "name": "node-jwt-auth",
+  "name": "workout-app",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,7 +8,7 @@
     "test": "mocha --exit"
   },
   "keywords": [],
-  "author": "",
+  "author": "Brian Thomas",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.0",

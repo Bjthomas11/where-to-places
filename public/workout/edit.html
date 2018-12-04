@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>New Workout</title>
+</head>
+<body>
+    <form class="workout-edit-form">
+        <a href="/" class="button">Back to Home</a>
+        <h1>Edit Workout</h1>
+        <label for="title-txt">
+            Name of Workout:
+            <br><input type="text" class="title-txt" class="form-field" disabled required>
+        </label>
+        <br>
+        <label for="weight-txt">
+            How much weight?:
+            <br><input type="text" class="weight-txt" class="form-field" disabled required>
+        </label>
+        <br>
+        <label for="reps-txt">
+            How many sets?:
+            <br><input type="text" class="reps-txt" class="form-field" disabled required>
+        </label>
+        <br>
+        <button type="submit" value="Edit New Workout" class="submit-btn">Submit Workout</button>
+    </form>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="./edit.page.js"></script>
+</body>
+</html>
