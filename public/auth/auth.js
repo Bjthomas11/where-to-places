@@ -1,45 +1,57 @@
 "use strict"
 
-function onPageLoad(){
-    $(".sign-up-form").submit(onSignUpSubmit);
-    $(".login-form").submit(onLoginSubmit);
+const RENDER = window.RENDER_MODULE;
+const HTTP = window.HTTP_MODULE;
+const CACHE = window.CACHE_MODULE;
+
+$(document).ready(onPageLoad);
+
+function onPageLoad() {
+    $('.sign-up-form').submit(onSignUpSubmit);
+    $('.login-form').submit(onLoginSubmit);
 }
 
-function onSignUpSubmit(e){
-    e.preventDefault();
+function onSignUpSubmit(event) {
+    event.preventDefault();
+
     const userData = {
-        name: $(".name-txt").val(),
-        email: $(".email-txt").val(),
-        username: $(".username-txt").val(),
-        password: $(".password-txt").val()
-    }
-    signUpUser({
+        name: $('.name-txt').val(),
+        email: $('.email-txt').val(),
+        username: $('.username-txt').val(),
+        password: $('.password-txt').val()
+    };
+
+    signupUser({
         userData,
         onSuccess: user => {
             alert(`User "${user.username}" created, you may now log in.`);
-            window.open("/auth/login.html", "_self");
+            window.open('/auth/login.html', '_self');
         },
         onError: err => {
-            alert("Password must be at least 3 characters long, Username must be at lease 5 characters long");
+            alert('Password must be atleast 3 characters long, Username must be atleast 4 characters long');
         }
     });
 }
 
-function onLoginSubmit(e){
-    e.preventDefault();
+function onLoginSubmit(event) {
+    event.preventDefault();
+
     const userData = {
-        username: $(".username-txt").val(),
-        password: $(".password-txt").val()
-    }
+        username: $('.username-txt').val(),
+        password: $('.password-txt').val()
+    };
+
     loginUser({
         userData,
-        onSuccess: res => {
-            const authenticatedUser = res.user;
-            authenticatedUser.jwtToken = res.jwtToken;
-            alert("Login successful, redirecting you to home..");
+        onSuccess: response => {
+            const authenticatedUser = response.user;
+            authenticatedUser.jwtToken = response.jwtToken;
+            CACHE.saveAuthenticatedUserIntoCache(authenticatedUser);
+            alert('Login succesful, redirecting you to homepage ...');
+            window.open('/', '_self');
         },
         onError: err => {
-            alert("Incorrect username and/or password, Try Again.");
+            alert('Incorrect username or password. Please try again.');
         }
     });
 }
