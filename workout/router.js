@@ -2,7 +2,6 @@ const express = require("express");
 const Joi = require("joi");
 const passport = require("passport");
 const router = express.Router();
-const {jwtPassportMiddleware} = require("../auth/strategies");
 const {Workout, WorkoutJoiSchema} = require("./models.js");
 const jwtAuth = passport.authenticate('jwt', { session: false });
 
@@ -32,7 +31,7 @@ router.post('/', jwtAuth, (req, res) => {
         })
         // return an error if unexpected happens
         .catch(error => {
-            return res.status(HTTP_STATUS_CODES.INTERNAL_SERVER_ERROR).json(error);
+            return res.status(501).json(error);
         });
 });
 
