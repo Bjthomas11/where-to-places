@@ -46,13 +46,7 @@ router.get("/:id", (req, res) => {
 //POST request
 router.post("/", (req, res) => {
   //ensure all the fields are in req body
-  const requiredFields = [
-    "title",
-    "travelDate",
-    "coverPhoto",
-    "description",
-    "memories"
-  ];
+  const requiredFields = ["title", "travelDate", "coverPhoto", "description"];
   for (let i = 0; i < requiredFields.length; i++) {
     const field = requiredFields[i];
     if (!(field in req.body)) {
@@ -66,10 +60,7 @@ router.post("/", (req, res) => {
     title: req.body.title,
     travelDate: req.body.travelDate,
     coverPhoto: req.body.coverPhoto,
-    description: req.body.description,
-    memories: req.body.memories,
-    words: req.body.words,
-    morePhotos: req.body.morePhotos
+    description: req.body.description
   })
     .then(entry => res.status(201).json(entry.serialize()))
     .catch(err => {
@@ -89,15 +80,7 @@ router.put("/:id", (req, res) => {
   }
 
   const toUpdate = {};
-  const updateableFields = [
-    "title",
-    "travelDate",
-    "coverPhoto",
-    "description",
-    "memories",
-    "words",
-    "morePhotos"
-  ];
+  const updateableFields = ["title", "travelDate", "coverPhoto", "description"];
   updateableFields.forEach(field => {
     if (field in req.body) {
       console.log(req.body.field);

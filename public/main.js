@@ -43,13 +43,6 @@ function renderLoginPage() {
 				<button type="submit" class="js-login-button">Login</button>
 				<p>Don't have an account? <a href="" class ="nav-signup">Sign up</a></p>
 			</form>
-			<div class="demo-account"> 
-				<p>Demo account:</p>
-				<ul>
-             	 <li>Username: demo@gmail.com</li>
-             	 <li>Password: password</li>
-           	   </ul>
-           	   </div>
 		</section> `;
 }
 
@@ -323,34 +316,6 @@ function renderAddEditEntry(entry = null) {
           entry ? `value="${entry.description}"` : ""
         }>
 			</div>
-			<div class="best-memory">
-				<h5>Best memory</h5>
-				<input type="text" name="best-memory" id="entry-best-memory" placeholder="Share your best memory of the trip..." 
-				${entry ? `value="${entry.memories}"` : ""}>
-			</div>
-			<div class="foreign-words">
-				<h5>Foreign words to remember</h5>
-				<input type="text" name="foreign-words" id="entry-foreign-words" placeholder="Keep the new foreign words learned here..." 
-				${entry ? `value="${entry.words}"` : ""}>
-			</div>
-			<div class="more-photos">
-				<h5>Add more photos here</h5>
-				<input type="text" name="morePhotos" id="morePhotos-0" ${
-          entry && entry.morePhotos[0]
-            ? ` value="${entry.morePhotos[0]}"`
-            : `placeholder="Image link"`
-        }>
-				<input type="text" name="morePhotos" id="morePhotos-1" ${
-          entry && entry.morePhotos[1]
-            ? ` value="${entry.morePhotos[1]}"`
-            : `placeholder="Image link"`
-        }>
-				<input type="text" name="morePhotos" id="morePhotos-2" ${
-          entry && entry.morePhotos[2]
-            ? ` value="${entry.morePhotos[2]}"`
-            : `placeholder="Image link"`
-        }>
-			</div>
 		</section>
 		</form>	
 	</main>
@@ -415,28 +380,6 @@ function renderEachEntry(entry) {
        }"></div>
 			<div class="main-entry-description">
 				<p class="p-entry" id="p-entry">${entry.description}</p>		
-			</div>
-			<div class="main-best-memory">
-				<h5>Best memory</h5>
-				<p class="p-entry" id="js-memory"> 
-					${entry.memories}
-				</p>	
-			</div>
-			<div class="main-foreign-words">
-				<h5>Foreign words to remember</h5>
-				<p class="p-entry">
-					${entry.words}
-				</p>
-			</div>
-			<div class="more-photos">
-
-			${entry.morePhotos
-        .map(function(photoUrl) {
-          return `
-				<img class="more-photos" src="${photoUrl}">
-				`;
-        })
-        .join("\n")}
 			</div>
 		</section>	
 	</main>
@@ -552,25 +495,13 @@ function saveEntry(newEntry) {
     });
 }
 
-function createEntry(
-  title,
-  travelDate,
-  coverPhoto,
-  description,
-  memories,
-  words,
-  morePhotos
-) {
-  //journalEntriesStorage.create(getUserDashboard, title, travelDate, coverPhoto, description, memories,
-  //	words, morePhotos);
+function createEntry(title, travelDate, coverPhoto, description) {
+  //journalEntriesStorage.create(getUserDashboard, title, travelDate, coverPhoto, description,);
   const newEntry = {
     title,
     travelDate,
     coverPhoto,
-    description,
-    memories,
-    words,
-    morePhotos
+    description
   };
   $.ajax({
     type: "POST",
@@ -601,28 +532,8 @@ function handleSaveButton() {
     let travelDate = $("#travel-date").val();
     let coverPhoto = $("#main-image").val();
     let description = $("#journal-description").val();
-    let memories = $("#entry-best-memory").val();
-    let words = $("#entry-foreign-words").val();
-    let morePhotos = [
-      $("#morePhotos-0").val(),
-      $("#morePhotos-1").val(),
-      $("#morePhotos-2").val()
-    ];
-    // $('#more-photos').val().map(function(photoUrl) {
-    //		return morePhotos.push(photoUrl);
-    //	});
-    console.log(morePhotos);
-
     if ($(this).data("entryid") === undefined) {
-      createEntry(
-        title,
-        travelDate,
-        coverPhoto,
-        description,
-        memories,
-        words,
-        morePhotos
-      );
+      createEntry(title, travelDate, coverPhoto, description);
     } else {
       const id = $(this).data("entryid");
 
@@ -631,10 +542,7 @@ function handleSaveButton() {
         title,
         travelDate,
         coverPhoto,
-        description,
-        memories,
-        words,
-        morePhotos
+        description
       };
       saveEntry(newEntry);
     }
