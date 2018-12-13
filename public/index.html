@@ -1,35 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Home Page</title>
-  </head>
-  <body>
-    <nav>
-      <section class="unauth-menu">
-        <h1>Welcome to Fitness Session</h1>
-        <h2>Keep track of your physical activites</h2>
-        <a href="/auth/login.html" class="button">Login</a>
-        <a href="/auth/signup.html" class="button">Sign Up</a>
-      </section>
+	<head>
+		<title>Travel e-Journal</title>
+		<link rel="stylesheet" type="text/css" href="normalize.css">
+		<link rel="stylesheet" type="text/css" href="main.css">
+		<script
+	  src="https://code.jquery.com/jquery-3.3.1.js"
+	  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+	  crossorigin="anonymous"></script>	
+		
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
+		<meta charset="utf-8">
+		<meta name="description" content="Create a beautiful travel journal">
+		<meta name="keywords" content="travel journal, online travel journal, travel diary, online travel
+		diary, travel blog">
+		<meta name="author" content="Anna Kremer">
+		<meta name="viewport" content="width=device-width, minimum-scale=1">
+	</head>
 
-      <section class="auth-menu" hidden>
-        <div class="non-workout-list">
-          <button class="logout-btn">Logout</button><br />
-          <h2 class="greeting"></h2>
-          <a href="/workout/create.html" class="create-btn"
-            >Create Workout Session</a
-          >
-        </div>
-        <div class="workout-list"></div>
-      </section>
-    </nav>
-    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-    <script src="../utilities/cache.module.js"></script>
-    <script src="../utilities/render.module.js"></script>
-    <script src="../utilities/http.module.js"></script>
-    <script src="./index.js"></script>
-  </body>
+	<body>
+		<header role="banner">
+			<div class="logo-bar">
+				<div class="home-button"><a href=""><i class="fa fa-home"></i></a> </div>
+				<h1>Travel e-Journal</h1>
+				<p class="hello-user"></p>
+			</div>
+		</header>
+	   <div class="main-area">
+		<div class="nav-bar main-nav-bar">
+			<div class="nav-1">
+				<div class="nav-link"><a class="nav-login" href="">Log In</a></div>
+				<div class="nav-link nav-2"><a href="" class="nav-signup">Sign Up</a></div>
+			</div>         
+		</div>
+		
+		<!--  LANDING PAGE -->
+
+		<main role="main" id="main-page">
+			<div class="landing-page">
+				<div class="banner-photo" id="banner">
+					<h2 class="main-title">The memories that last forever</h2>
+					<div class="signup-button"><a href="" class="nav-signup">Sign Up</a></div>
+				</div>
+
+				<section class="website-description">
+					<h3>Save your travel experiences</h3>
+					<p>Create a beautiful Travel Journal online. Save your travel experiences and never loose the 
+					photos and memories.</p>
+					<div class="img-container">
+						<img src="photos/photo-2.jpg" class="landing-page-photos">
+					</div>
+					<h3>Travel Journal is something you'll treasure forever</h3>
+					<div class="img-container">
+						<p>“The journey of a thousand miles begins with a single step.”</p>
+						<img src="photos/photo-3.jpg" class="landing-page-photos">
+					</div>
+					<p>“The world is a book and those who do not travel read only one page.” – Augustine of Hippo</p>
+						<div class="img-container">
+						
+						<img src="photos/photo-4.jpg" class="landing-page-photos">
+					</div>
+
+					<div class="scrolltop">
+				<a class="scroll" href="#banner" aria-label="return to the top of the page">
+					<i class="fas fa-angle-double-up"></i>
+				</a>	
+				</section>
+		</div>
+		</main>
+		
+	    </div>
+		</main>
+	<script type="text/javascript" src="main.js"></script>
+	</body>
 </html>
