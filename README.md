@@ -1,3 +1,5 @@
+<a href="https://stark-spire-27149.herokuapp.com">Live Version</a>
+
 # Where To!
 
 Where To app helps users to keep track of the places they visit by adding location name, a description of the place, and photos of the place.
@@ -35,5 +37,3 @@ Functionality includes:
 <li>Heroku</li>
 
 This app is responsive
-
-Live Verison: <a href="https://stark-spire-27149.herokuapp.com">Live Version</a>
