@@ -1,0 +1,630 @@
+* {
+  box-sizing: border-box;
+}
+
+/* HEADER*/
+.logo-bar {
+  background-color: black;
+  height: 36px;
+  text-align: center;
+  width: 100%;
+  text-decoration: none;
+}
+h1 {
+  color: white;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.home-button {
+  position: absolute;
+  top: 5px;
+  left: 11px;
+  z-index: 100;
+}
+div.home-button a {
+  color: #c3c3c3a6;
+  font-size: 22px;
+}
+i.fa.fa-home {
+  font-size: 26px;
+}
+.login-header {
+  text-align: center;
+}
+
+/*NAVIGATION BAR */
+.nav-1 {
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+}
+.nav-1 a {
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 36px;
+  color: black;
+}
+.nav-1 a:hover {
+  text-decoration: underline;
+  color: black;
+  cursor: pointer;
+}
+.nav-link {
+  display: inline-block;
+  border: 1px solid #e5e5e5;
+  border-top: 0;
+  border-bottom: 0;
+  height: 36px;
+  font-size: 1em;
+  width: 20%;
+  margin-right: -5px;
+}
+section.edit-entry {
+  margin-bottom: 40px;
+}
+
+/* BANNER PHOTO */
+.banner-photo {
+  background: url(photos/banner-photo.jpeg) no-repeat center top;
+  height: 734px;
+  background-size: 100%;
+  text-align: center;
+  background-attachment: fixed;
+}
+
+.main-title {
+  padding-top: 145px;
+  color: white;
+  font-size: 40px;
+  font-weight: 800;
+}
+.signup-button {
+  border: 3px white solid;
+  width: 209px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 12px;
+  padding-bottom: 11px;
+}
+.signup-button a {
+  text-decoration: none;
+  font-size: 30px;
+  color: white;
+  text-transform: uppercase;
+}
+form.login {
+  text-align: center;
+}
+legend {
+  text-align: center;
+}
+/* MAIN*/
+.website-description {
+  text-align: center;
+}
+.website-description p {
+  font-size: 24px;
+  font-style: italic;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+h3 {
+  font-size: 30px;
+}
+.img-container {
+  text-align: center;
+}
+.img-container img {
+  width: 75%;
+}
+
+/* LOGIN PAGE  and SIGNUP PAGE*/
+.login-screen,
+.signup-page-screen {
+  text-align: center;
+}
+fieldset {
+  border: none;
+}
+.login-header {
+  border-bottom: 2px solid #000;
+  margin-top: 72px;
+  font-size: 36px;
+  width: 73%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 52px;
+  text-align: center;
+}
+.login-header legend {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+input[type="email"],
+input[type="password"] {
+  display: block;
+  width: 322px;
+  padding: 5px;
+  margin: 10px auto 20px auto;
+  font-size: 18px;
+  border: 2px solid #e6e6e6;
+  background-color: #f2f2f2;
+}
+label {
+  font-size: 18px;
+}
+.js-login-button,
+.js-signup-button {
+  width: 106px;
+  padding: 3px;
+  background-color: #f2f2f2;
+  transition: background-color 0.5s ease;
+}
+.js-login-button:hover,
+.js-signup-button:hover {
+  cursor: pointer;
+  background-color: #a9a9a9bf;
+}
+#notification {
+  font-size: 16px;
+  color: #e60000;
+  margin: 0 10px 0 10px;
+}
+.demo-account {
+  width: 300px;
+  margin: 40px 0 40px 0;
+  display: inline-block;
+}
+.demo-account ul {
+  text-align: left;
+}
+
+/* SMALLER SCREENS */
+
+@media only screen and (max-width: 560px) {
+  input#journal-title,
+  input#travel-date,
+  input#journal-description,
+  input#entry-best-memory,
+  input#entry-foreign-words,
+  #js-edit-form div.more-photos,
+  div.best-memory,
+  div.foreign-words,
+  input#morePhotos-0,
+  input#morePhotos-1,
+  input#morePhotos-2 {
+    width: 99% !important;
+    text-align: left;
+  }
+  section.edit-entry div.entry-description {
+    margin-top: 112px;
+  }
+  section.trip-entries h5.entry-title,
+  section.each-entry h5.entry-title {
+    width: 90%;
+  }
+
+  .logo-bar {
+    height: 42px;
+    width: 101%;
+  }
+  .nav-link {
+    border-right: 1px solid #e5e5e5;
+    border-left: none;
+    height: 36px;
+    font-size: 1em;
+    width: 49%;
+  }
+  .nav-2 {
+    border-right: none;
+  }
+  .banner-photo {
+    height: 318px;
+    background-size: 213%;
+  }
+  h3 {
+    font-size: 22px;
+  }
+  .website-description p {
+    font-size: 16px;
+  }
+  .img-container img {
+    width: 93%;
+  }
+  .main-title {
+    padding-top: 28%;
+    color: white;
+    font-size: 21px;
+    font-weight: 800;
+  }
+  .login-header {
+    margin-top: 26px;
+    font-size: 27px;
+    margin-bottom: 35px;
+  }
+  .demo-account {
+    margin: -10px 0 40px 0;
+  }
+  input[type="email"],
+  input[type="password"] {
+    width: 80%;
+  }
+  input[type="text"] {
+    width: 90%;
+  }
+  .nav-1 a {
+    font-size: 14px;
+  }
+  .nav-link {
+    width: 33.33%;
+  }
+  /* Dashboard */
+  div.dashboard-header {
+    margin-top: 35px;
+    width: 80%;
+    font-size: 20px;
+  }
+  .trip-entries h4 {
+    margin-top: -40px;
+    font-size: 20px;
+  }
+  div.entry {
+    height: 200px;
+    width: 90%;
+    padding-top: 20%;
+  }
+  div.entry a {
+    font-size: 30px;
+  }
+  h5.entry-title {
+    margin-top: 20px;
+  }
+  img.main-entry-photo {
+    width: 90%;
+    height: auto;
+    margin-top: 0;
+  }
+  .trip-entries ul {
+    margin-left: -25px;
+  }
+  #js-save-button,
+  #js-cancel-button,
+  #js-edit-button,
+  #js-delete-button {
+    background-color: white;
+  }
+  #js-save-button,
+  #js-edit-button {
+    border-right: 1px solid #e5e5e5;
+    border-left: none;
+  }
+  #js-cancel-button,
+  #js-delete-button {
+    border-right: none;
+  }
+
+  #entry-photo {
+    width: 90%;
+    height: 262px;
+    padding-top: 78px;
+  }
+  div.entry-title {
+    width: 90%;
+    font-size: 20px;
+    margin-top: 1px;
+  }
+  div.entry-date {
+    width: 90%;
+    font-size: 18px;
+  }
+  div.entry-description {
+    margin-top: 99px;
+  }
+  p.entry-date {
+    width: 90%;
+  }
+  div.main-entry-description,
+  div.main-best-memory,
+  div.main-foreign-words,
+  div.more-photos {
+    margin-top: 32px;
+    width: 90%;
+  }
+  div.more-photos img.more-photos {
+    width: 90%;
+    text-align: center;
+  }
+  .each-entry div.more-photos {
+    width: 90%;
+  }
+}
+/*MEDIUM SIZE SCREENS*/
+@media only screen and (min-width: 561px) and (max-width: 900px) {
+  div.nav-link {
+    width: 35%;
+  }
+  .banner-photo {
+    height: 424px;
+    background-size: 156%;
+  }
+  h2.main-title {
+    padding-top: 121px;
+  }
+  div.nav-link {
+    width: 28%;
+  }
+}
+
+/* USER DASHBOARD*/
+.user-dashboard {
+  text-align: center;
+}
+.dashboard-header {
+  border-bottom: 2px solid #000;
+  margin-top: 72px;
+  font-size: 36px;
+  width: 73%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 52px;
+}
+
+.entry {
+  background-color: #f2f2f2;
+  height: 400px;
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 200px;
+}
+.entry a {
+  color: black;
+  font-size: 38px;
+  text-decoration: none;
+  border-bottom: 1px solid black;
+  text-transform: uppercase;
+}
+.entry-photo a {
+  color: black;
+}
+h4 {
+  font-style: italic;
+  margin-top: -31px;
+  font-size: 23px;
+}
+ul {
+  list-style-type: none;
+}
+
+/*ADD/EDIT ENTRY SCREEN */
+.edit-journal-entry {
+  text-align: center;
+}
+input#journal-title {
+  width: 600px;
+  border: none;
+  font-size: 22px;
+  border-bottom: 1px solid gray;
+  margin-bottom: 45px;
+}
+input#travel-date {
+  width: 600px;
+  border: none;
+  font-size: 15px;
+  border-bottom: 1px solid gray;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.entry-photo {
+  background-color: #f2f2f2;
+  height: 400px;
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 150px;
+  margin-bottom: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+input#journal-description,
+input#entry-best-memory,
+input#entry-foreign-words {
+  width: 600px;
+  height: 75px;
+  margin-bottom: 15px;
+  border: none;
+  border-bottom: 1px solid gray;
+}
+input#main-image {
+  width: 80%;
+}
+.main-image-a {
+  font-size: 16px;
+  text-transform: none;
+}
+.save,
+.cancel,
+.edit,
+.delete {
+  width: 99px;
+  border: none;
+  cursor: pointer;
+  border-right: 1px solid gray;
+  border-left: 1px solid gray;
+  font-size: 21px;
+  text-transform: uppercase;
+  margin-right: -5px;
+  margin-bottom: 20px;
+}
+.save-delete,
+.edit-delete {
+  margin-top: -52px;
+}
+h5 a {
+  cursor: pointer;
+}
+
+div.entry-description {
+  margin-top: 219px;
+}
+input#morePhotos-0,
+input#morePhotos-1,
+input#morePhotos-2 {
+  display: block;
+  margin-bottom: 20px;
+  width: 500px;
+}
+#js-save-button,
+#js-cancel-button,
+#js-edit-button,
+#js-delete-button {
+  background-color: white;
+}
+#js-save-button,
+#js-edit-button {
+  border-right: 1px solid #e5e5e5;
+  border-left: none;
+}
+#js-cancel-button,
+#js-delete-button {
+  border-right: none;
+}
+
+/* EACH INDIVIDUAL ENTRY */
+
+.journal-entry {
+  text-align: center;
+}
+.entry-title {
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  font-size: 22px;
+  font-style: italic;
+  margin-top: 58px;
+}
+.main-photo {
+  max-width: 100%;
+  /*object-fit: contain;*/
+  height: 400px;
+}
+.main-entry-photo {
+  height: 400px;
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 0px;
+  margin-bottom: 15px;
+}
+.main-entry-description,
+.main-best-memory,
+.main-foreign-words,
+div.more-photos {
+  margin-top: 83px;
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.p-entry {
+  text-align: left;
+}
+h5 {
+  text-align: left;
+  font-size: 17px;
+  font-style: italic;
+}
+img.more-photos {
+  width: 600px;
+  margin-bottom: 40px;
+}
+.plus {
+  font-size: 25px;
+  font-weight: 800;
+}
+div.more-photos {
+  margin-bottom: 70px;
+}
+
+/*List of entries */
+.entry-date {
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+  width: 600px;
+  font-style: italic;
+  margin-top: -31px;
+}
+
+div.best-memory,
+div.foreign-words {
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Back to top */
+div.scrolltop {
+  margin-top: 17px;
+  margin-bottom: 30px;
+}
+
+.fa-angle-double-up {
+  font-size: 35px !important;
+  color: gray;
+  position: relative;
+
+  -webkit-animation-name: blinker;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-name: blinker;
+  -moz-animation-duration: 1s;
+  -moz-animation-timing-function: linear;
+  -moz-animation-iteration-count: infinite;
+  animation-name: blinker;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@-moz-keyframes blinker {
+  0% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 0.7;
+  }
+}
+
+@-webkit-keyframes blinker {
+  0% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes blinker {
+  0% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 0.7;
+  }
+}
