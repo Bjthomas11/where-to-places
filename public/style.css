@@ -1,17 +1,20 @@
 * {
   box-sizing: border-box;
 }
-
-/* HEADER*/
-.logo-bar {
-  background-color: black;
-  height: 36px;
-  text-align: center;
-  width: 100%;
-  text-decoration: none;
+body {
+  margin: 0;
 }
+.container {
+  background: url(img/landing-page.jpeg) no-repeat center;
+  margin: 0;
+  background-size: 100%;
+  background-attachment: fixed;
+}
+/* HEADER*/
 h1 {
-  color: white;
+  text-transform: capitalize;
+  text-align: center;
+  color: #474646;
   margin-top: 0px;
   margin-bottom: 0px;
 }
@@ -22,14 +25,11 @@ h1 {
   z-index: 100;
 }
 div.home-button a {
-  color: #c3c3c3a6;
+  color: #474646;
   font-size: 22px;
 }
 i.fa.fa-home {
-  font-size: 26px;
-}
-.login-header {
-  text-align: center;
+  font-size: 30px;
 }
 
 /*NAVIGATION BAR */
@@ -37,7 +37,6 @@ i.fa.fa-home {
   margin-right: auto;
   margin-left: auto;
   text-align: center;
-  border-bottom: 1px solid #e5e5e5;
 }
 .nav-1 a {
   text-decoration: none;
@@ -48,41 +47,30 @@ i.fa.fa-home {
   color: black;
 }
 .nav-1 a:hover {
-  text-decoration: underline;
-  color: black;
+  color: #245cc4;
   cursor: pointer;
 }
 .nav-link {
   display: inline-block;
-  border: 1px solid #e5e5e5;
-  border-top: 0;
-  border-bottom: 0;
   height: 36px;
   font-size: 1em;
   width: 20%;
-  margin-right: -5px;
 }
-section.edit-entry {
-  margin-bottom: 40px;
-}
-
-/* BANNER PHOTO */
-.banner-photo {
-  background: url(photos/banner-photo.jpeg) no-repeat center top;
+/* description-title */
+.description-title {
   height: 734px;
   background-size: 100%;
   text-align: center;
-  background-attachment: fixed;
 }
-
 .main-title {
-  padding-top: 145px;
-  color: white;
+  text-transform: capitalize;
+  color: #474646;
+  padding-top: 150px;
   font-size: 40px;
   font-weight: 800;
 }
 .signup-button {
-  border: 3px white solid;
+  border: 1px #474646 solid;
   width: 209px;
   margin-left: auto;
   margin-right: auto;
@@ -92,8 +80,15 @@ section.edit-entry {
 .signup-button a {
   text-decoration: none;
   font-size: 30px;
-  color: white;
+  color: #474646;
+  text-transform: capitalize;
+}
+.signup-button a:hover {
+  color: #245cc4;
   text-transform: uppercase;
+}
+.signup-button:hover {
+  border: 1px #245cc2 solid;
 }
 form.login {
   text-align: center;
@@ -101,26 +96,6 @@ form.login {
 legend {
   text-align: center;
 }
-/* MAIN*/
-.website-description {
-  text-align: center;
-}
-.website-description p {
-  font-size: 24px;
-  font-style: italic;
-  padding-left: 30px;
-  padding-right: 30px;
-}
-h3 {
-  font-size: 30px;
-}
-.img-container {
-  text-align: center;
-}
-.img-container img {
-  width: 75%;
-}
-
 /* LOGIN PAGE  and SIGNUP PAGE*/
 .login-screen,
 .signup-page-screen {
@@ -130,13 +105,13 @@ fieldset {
   border: none;
 }
 .login-header {
-  border-bottom: 2px solid #000;
+  /* border-bottom: 1px solid #000; */
   margin-top: 72px;
-  font-size: 36px;
+  font-size: 35px;
   width: 73%;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 52px;
+  margin-bottom: 70px;
   text-align: center;
 }
 .login-header legend {
@@ -148,216 +123,57 @@ fieldset {
 input[type="email"],
 input[type="password"] {
   display: block;
-  width: 322px;
-  padding: 5px;
+  width: 180px;
   margin: 10px auto 20px auto;
-  font-size: 18px;
-  border: 2px solid #e6e6e6;
+  font-size: 12px;
+  border: 2px solid #245cc4;
+  border-radius: 4px;
   background-color: #f2f2f2;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  outline: none;
+}
+input[type="email"],
+input[type="password"] {
+  -webkit-transition: width 0.4s ease-in-out;
+}
+input[type="email"],
+input[type="password"]:focus {
+  width: 45%;
 }
 label {
   font-size: 18px;
 }
+hr.style-two {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 0)
+  );
+}
 .js-login-button,
 .js-signup-button {
-  width: 106px;
-  padding: 3px;
+  width: 160px;
+  padding: 8px;
   background-color: #f2f2f2;
-  transition: background-color 0.5s ease;
+  border: 2px solid #245cc4;
+  border-radius: 4px;
+  transition: background-color 1s ease;
 }
 .js-login-button:hover,
 .js-signup-button:hover {
   cursor: pointer;
-  background-color: #a9a9a9bf;
+  color: #fff;
+  border: 2px solid #000;
+  background-color: #245cc4;
 }
 #notification {
-  font-size: 16px;
+  font-size: 20px;
   color: #e60000;
   margin: 0 10px 0 10px;
-}
-.demo-account {
-  width: 300px;
-  margin: 40px 0 40px 0;
-  display: inline-block;
-}
-.demo-account ul {
-  text-align: left;
-}
-
-/* SMALLER SCREENS */
-
-@media only screen and (max-width: 560px) {
-  input#journal-title,
-  input#travel-date,
-  input#journal-description,
-  input#entry-best-memory,
-  input#entry-foreign-words,
-  #js-edit-form div.more-photos,
-  div.best-memory,
-  div.foreign-words,
-  input#morePhotos-0,
-  input#morePhotos-1,
-  input#morePhotos-2 {
-    width: 99% !important;
-    text-align: left;
-  }
-  section.edit-entry div.entry-description {
-    margin-top: 112px;
-  }
-  section.trip-entries h5.entry-title,
-  section.each-entry h5.entry-title {
-    width: 90%;
-  }
-
-  .logo-bar {
-    height: 42px;
-    width: 101%;
-  }
-  .nav-link {
-    border-right: 1px solid #e5e5e5;
-    border-left: none;
-    height: 36px;
-    font-size: 1em;
-    width: 49%;
-  }
-  .nav-2 {
-    border-right: none;
-  }
-  .banner-photo {
-    height: 318px;
-    background-size: 213%;
-  }
-  h3 {
-    font-size: 22px;
-  }
-  .website-description p {
-    font-size: 16px;
-  }
-  .img-container img {
-    width: 93%;
-  }
-  .main-title {
-    padding-top: 28%;
-    color: white;
-    font-size: 21px;
-    font-weight: 800;
-  }
-  .login-header {
-    margin-top: 26px;
-    font-size: 27px;
-    margin-bottom: 35px;
-  }
-  .demo-account {
-    margin: -10px 0 40px 0;
-  }
-  input[type="email"],
-  input[type="password"] {
-    width: 80%;
-  }
-  input[type="text"] {
-    width: 90%;
-  }
-  .nav-1 a {
-    font-size: 14px;
-  }
-  .nav-link {
-    width: 33.33%;
-  }
-  /* Dashboard */
-  div.dashboard-header {
-    margin-top: 35px;
-    width: 80%;
-    font-size: 20px;
-  }
-  .trip-entries h4 {
-    margin-top: -40px;
-    font-size: 20px;
-  }
-  div.entry {
-    height: 200px;
-    width: 90%;
-    padding-top: 20%;
-  }
-  div.entry a {
-    font-size: 30px;
-  }
-  h5.entry-title {
-    margin-top: 20px;
-  }
-  img.main-entry-photo {
-    width: 90%;
-    height: auto;
-    margin-top: 0;
-  }
-  .trip-entries ul {
-    margin-left: -25px;
-  }
-  #js-save-button,
-  #js-cancel-button,
-  #js-edit-button,
-  #js-delete-button {
-    background-color: white;
-  }
-  #js-save-button,
-  #js-edit-button {
-    border-right: 1px solid #e5e5e5;
-    border-left: none;
-  }
-  #js-cancel-button,
-  #js-delete-button {
-    border-right: none;
-  }
-
-  #entry-photo {
-    width: 90%;
-    height: 262px;
-    padding-top: 78px;
-  }
-  div.entry-title {
-    width: 90%;
-    font-size: 20px;
-    margin-top: 1px;
-  }
-  div.entry-date {
-    width: 90%;
-    font-size: 18px;
-  }
-  div.entry-description {
-    margin-top: 99px;
-  }
-  p.entry-date {
-    width: 90%;
-  }
-  div.main-entry-description,
-  div.main-best-memory,
-  div.main-foreign-words,
-  div.more-photos {
-    margin-top: 32px;
-    width: 90%;
-  }
-  div.more-photos img.more-photos {
-    width: 90%;
-    text-align: center;
-  }
-  .each-entry div.more-photos {
-    width: 90%;
-  }
-}
-/*MEDIUM SIZE SCREENS*/
-@media only screen and (min-width: 561px) and (max-width: 900px) {
-  div.nav-link {
-    width: 35%;
-  }
-  .banner-photo {
-    height: 424px;
-    background-size: 156%;
-  }
-  h2.main-title {
-    padding-top: 121px;
-  }
-  div.nav-link {
-    width: 28%;
-  }
 }
 
 /* USER DASHBOARD*/
@@ -626,5 +442,195 @@ div.scrolltop {
   }
   100% {
     opacity: 0.7;
+  }
+}
+/* SMALLER SCREENS */
+@media only screen and (max-width: 560px) {
+  h1 {
+    font-size: 25px;
+  }
+  input[type="email"],
+  input[type="password"] {
+    display: block;
+    width: 160px;
+    margin: 10px auto 20px auto;
+    font-size: 12px;
+    border: 2px solid #245cc4;
+    border-radius: 4px;
+    background-color: #f2f2f2;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    outline: none;
+  }
+  input[type="email"],
+  input[type="password"] {
+    -webkit-transition: width 0.4s ease-in-out;
+  }
+  input[type="email"],
+  input[type="password"]:focus {
+    width: 45%;
+  }
+  input#journal-title,
+  input#travel-date,
+  #js-edit-form {
+    width: 100%;
+    text-align: center;
+  }
+  input#journal-title,
+  input#travel-date {
+    width: 50%;
+  }
+  section.edit-entry {
+    margin-top: 112px;
+  }
+  section.trip-entries h5.entry-title,
+  section.each-entry h5.entry-title {
+    width: 20%;
+  }
+  .nav-link {
+    border-left: none;
+    height: 36px;
+    font-size: 1em;
+    width: 49%;
+  }
+  .nav-2 {
+    border-right: none;
+  }
+  .description-title {
+    height: 318px;
+    background-size: 213%;
+  }
+  .img-container img {
+    width: 93%;
+  }
+  .main-title {
+    padding-top: 28%;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: #474646;
+    font-size: 20px;
+  }
+  .signup-button {
+    border: 1px #474646 solid;
+    width: 180px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 12px;
+    padding-bottom: 11px;
+  }
+  .signup-button a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #474646;
+    text-transform: capitalize;
+  }
+  .signup-button a:hover {
+    color: #245cc4;
+    text-transform: uppercase;
+  }
+  .signup-button:hover {
+    border: 1px #245cc2 solid;
+  }
+  .login-header {
+    margin-top: 26px;
+    font-size: 27px;
+    margin-bottom: 35px;
+  }
+  .nav-1 a {
+    font-size: 12px;
+  }
+  .nav-link {
+    width: 33.33%;
+  }
+
+  /* Dashboard */
+  div.dashboard-header {
+    text-transform: capitalize;
+    margin-top: 35px;
+    width: 80%;
+    font-size: 20px;
+  }
+  .trip-entries h4 {
+    font-size: 10px;
+  }
+  div.entry {
+    height: 200px;
+    width: 90%;
+    padding-top: 30px;
+    background: none;
+  }
+  div.entry a {
+    font-size: 30px;
+  }
+  div.entry a:hover {
+    color: #245cc4;
+  }
+  h5.entry-title {
+    margin-top: 2px;
+  }
+  img.main-entry-photo {
+    width: 90%;
+    height: auto;
+    margin-top: 0;
+  }
+  .trip-entries ul {
+    margin-left: -25px;
+  }
+  #js-save-button,
+  #js-cancel-button,
+  #js-edit-button,
+  #js-delete-button {
+    background: none;
+  }
+  #entry-photo {
+    width: 90%;
+    height: 262px;
+    padding-top: 78px;
+  }
+  div.entry-title {
+    width: 90%;
+    font-size: 20px;
+    margin-top: 1px;
+  }
+  div.entry-date {
+    width: 90%;
+    font-size: 18px;
+  }
+  div.entry-description {
+    margin-top: 99px;
+  }
+  p.entry-date {
+    width: 90%;
+  }
+  div.main-entry-description,
+  div.main-best-memory,
+  div.main-foreign-words,
+  div.more-photos {
+    margin-top: 32px;
+    width: 90%;
+  }
+  div.more-photos img.more-photos {
+    width: 90%;
+    text-align: center;
+  }
+  .each-entry div.more-photos {
+    width: 90%;
+  }
+}
+
+/*MEDIUM SIZE SCREENS*/
+@media only screen and (min-width: 561px) and (max-width: 900px) {
+  div.nav-link {
+    width: 35%;
+  }
+  .description-title {
+    height: 424px;
+    background-size: 156%;
+  }
+  h2.main-title {
+    padding-top: 121px;
+  }
+  div.nav-link {
+    width: 28%;
   }
 }

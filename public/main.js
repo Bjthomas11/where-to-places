@@ -39,7 +39,8 @@ function renderLoginPage() {
 			<form role="form" class="login">
 				<fieldset name="login-info">
 					<div class="login-header">
-						<legend align="center">Log In</legend>
+            <legend>Log In</legend>
+            <hr class="style-two">
 				    </div>
 				    <p id='notification'></p>
 					<label for="email" required>Email</label>
@@ -82,7 +83,8 @@ function renderSignupPage() {
 			<form role="form" class="signup">
 				<fieldset name="signup-info">
 					<div class="login-header">
-						<legend>Sign Up</legend>
+            <legend>Sign Up</legend>
+            <hr class="style-two">
 				    </div>
 				    <p id='notification'></p>
 					<label for="email" required>Email</label>
