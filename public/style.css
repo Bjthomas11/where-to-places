@@ -6,6 +6,10 @@ body {
 }
 .container {
   background: url(img/landing-page.jpeg) no-repeat center;
+  background-size: 100%;
+}
+.inner-container {
+  /* background: url(img/landing-page.jpeg) no-repeat center; */
   margin: 0;
   background-size: 100%;
   background-attachment: fixed;
@@ -17,19 +21,6 @@ h1 {
   color: #474646;
   margin-top: 0px;
   margin-bottom: 0px;
-}
-.home-button {
-  position: absolute;
-  top: 5px;
-  left: 11px;
-  z-index: 100;
-}
-div.home-button a {
-  color: #474646;
-  font-size: 22px;
-}
-i.fa.fa-home {
-  font-size: 30px;
 }
 
 /*NAVIGATION BAR */
@@ -61,6 +52,13 @@ i.fa.fa-home {
   height: 734px;
   background-size: 100%;
   text-align: center;
+}
+.fade-in {
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 2s;
 }
 .main-title {
   text-transform: capitalize;
@@ -181,18 +179,18 @@ hr.style-two {
   text-align: center;
 }
 .dashboard-header {
-  border-bottom: 2px solid #000;
+  /* border-bottom: 2px solid #000; */
   margin-top: 72px;
   font-size: 36px;
   width: 73%;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 52px;
+  text-transform: capitalize;
 }
 
 .entry {
   background-color: none;
-  height: 150px;
+  height: 130px;
   width: 500px;
   margin-left: auto;
   margin-right: auto;
@@ -266,8 +264,8 @@ input#main-image {
   width: 99px;
   border: none;
   cursor: pointer;
-  border-right: 1px solid gray;
-  border-left: 1px solid gray;
+  /* border-right: 1px solid gray; */
+  /* border-left: 1px solid gray; */
   font-size: 21px;
   text-transform: uppercase;
   margin-right: -5px;
@@ -298,7 +296,7 @@ div.entry-description {
 }
 #js-save-button,
 #js-edit-button {
-  border-right: 1px solid #e5e5e5;
+  /* border-right: 1px solid #e5e5e5; */
   border-left: none;
 }
 #js-cancel-button,
@@ -351,11 +349,12 @@ h5 {
 
 /*List of entries */
 .entry-date {
-  text-align: left;
+  font-weight: 700;
+  text-align: center;
   margin-left: auto;
   margin-right: auto;
   width: 600px;
-  font-style: italic;
+  font-size: 30px;
   margin-top: -31px;
 }
 
@@ -365,64 +364,13 @@ div.scrolltop {
   margin-bottom: 30px;
 }
 
-.fa-angle-double-up {
-  font-size: 35px !important;
-  color: gray;
-  position: relative;
-
-  -webkit-animation-name: blinker;
-  -webkit-animation-duration: 1s;
-  -webkit-animation-timing-function: linear;
-  -webkit-animation-iteration-count: infinite;
-  -moz-animation-name: blinker;
-  -moz-animation-duration: 1s;
-  -moz-animation-timing-function: linear;
-  -moz-animation-iteration-count: infinite;
-  animation-name: blinker;
-  animation-duration: 1s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
-
-@-moz-keyframes blinker {
-  0% {
-    opacity: 0.7;
-  }
-  50% {
-    opacity: 0.1;
-  }
-  100% {
-    opacity: 0.7;
-  }
-}
-
-@-webkit-keyframes blinker {
-  0% {
-    opacity: 0.7;
-  }
-  50% {
-    opacity: 0.1;
-  }
-  100% {
-    opacity: 0.7;
-  }
-}
-
-@keyframes blinker {
-  0% {
-    opacity: 0.7;
-  }
-  50% {
-    opacity: 0.1;
-  }
-  100% {
-    opacity: 0.7;
-  }
-}
 /* SMALLER SCREENS */
 @media only screen and (max-width: 560px) {
   h1 {
     font-size: 25px;
+  }
+  h2 {
+    font-size: 20px;
   }
   input[type="email"],
   input[type="password"] {
@@ -525,6 +473,13 @@ div.scrolltop {
     width: 80%;
     font-size: 20px;
   }
+  #js-cancel-button {
+    margin-top: 30px;
+  }
+  .hr-2 {
+    position: relative;
+    top: 20px;
+  }
   .trip-entries h4 {
     font-size: 10px;
   }
@@ -535,7 +490,7 @@ div.scrolltop {
     background: none;
   }
   div.entry a {
-    font-size: 30px;
+    font-size: 15px;
   }
   div.entry a:hover {
     color: #245cc4;
@@ -569,14 +524,14 @@ div.scrolltop {
   }
   h5 > a {
     text-transform: capitalize;
-    font-size: 20px;
+    font-size: 14px;
   }
   h5 > a:hover {
     color: #245cc4;
   }
   .entry-date {
     width: 90%;
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 600;
   }
   p.entry-date {
@@ -636,5 +591,80 @@ div.scrolltop {
   }
   a.js-edit-entry:hover {
     color: #245cc4;
+  }
+}
+.home-button {
+  position: absolute;
+  top: 5px;
+  left: 11px;
+  z-index: 100;
+}
+div.home-button a {
+  color: #c7a688;
+  font-size: 22px;
+}
+.fa-home {
+  font-size: 30px;
+}
+.fa-github {
+  color: #245cc4;
+  font-size: 30px;
+}
+.fa-github:hover {
+  animation: bounce 1.5 infinite;
+  -webkit-animation: bounce 1.5s infinite;
+  -moz-animation: bounce 1.5s infinite;
+  -o-animation: bounce 1.5s infinite;
+}
+.fa-home:hover {
+  animation: bounce 1.5 infinite;
+  -webkit-animation: bounce 1.5s infinite;
+  -moz-animation: bounce 1.5s infinite;
+  -o-animation: bounce 1.5s infinite;
+}
+
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+@-webkit-keyframes bounce {
+  0%,
+  100% {
+    -webkit-transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-10px);
+  }
+}
+@-moz-keyframes bounce {
+  0%,
+  100% {
+    -moz-transform: translateY(0);
+  }
+  50% {
+    -moz-transform: translateY(-10px);
+  }
+}
+@-o-keyframes bounce {
+  0%,
+  100% {
+    -o-transform: translateY(0);
+  }
+  50% {
+    -o-transform: translateY(-10px);
+  }
+}
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
   }
 }

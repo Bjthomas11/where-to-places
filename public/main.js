@@ -181,7 +181,8 @@ function renderUserDashboard(journalEntries) {
 	
 	<main role="main" class="user-dashboard">
 		<div class="dashboard-header">
-			<h2>My places</h2>
+      <h2>My places</h2>
+      <hr class="style-two">
 		</div>
 		<section class="trip-entries">
 			<div class="entry"><a href=""class="js-edit-entry">${
@@ -206,7 +207,13 @@ function renderUserDashboard(journalEntries) {
           : ""
       }
 			</ul>
-		</section>	
+    </section>
+    <footer class="footer">
+      <p>
+        Created by: Brian Thomas
+        <a href="https://github.com/Bjthomas11" target="_blank"><i class="fab fa-github"></i></a>
+      </p>
+    </footer>	
   `;
   // <li><h5 class="entry-title"><a data-entryid="${
   //   entry.id
@@ -332,7 +339,8 @@ function renderAddEditEntry(entry = null) {
 	
 	<main role="main" class="edit-journal-entry">
 		<div class="dashboard-header">
-			<h2>Edit My Place</h2>
+      <h2>Edit My Place</h2>
+      <hr class="style-two hr-2">
 		</div>
 		<form id="js-edit-form" ${entry ? `data-entryid="${entry.id}"` : ""}>
 		<div class="save-delete">
@@ -355,7 +363,13 @@ function renderAddEditEntry(entry = null) {
 			</div>
 		</section>
 		</form>	
-	</main>
+  </main>
+  <footer class="footer">
+    <p>
+      Created by: Brian Thomas
+      <a href="https://github.com/Bjthomas11" target="_blank"><i class="fab fa-github"></i></a>
+    </p>
+  </footer>
 	`;
 }
 
@@ -406,7 +420,8 @@ function renderEachEntry(entry) {
 		</div>
 		<main role="main" class="journal-entry">
 		<div class="dashboard-header">
-			<h2>Where To Place's</h2>
+      <h2>Where To Place's</h2>
+      <hr class="style-two">
 		</div>
 		<div class="edit-delete">
 			<button class="edit" id="js-edit-button" data-entryid="${
@@ -426,7 +441,13 @@ function renderEachEntry(entry) {
        }">
        </div>
 		</section>	
-	</main>
+  </main>
+  <footer class="footer">
+    <p>
+      Created by: Brian Thomas
+      <a href="https://github.com/Bjthomas11" target="_blank"><i class="fab fa-github"></i></a>
+    </p>
+  </footer>
 	`;
 }
 
