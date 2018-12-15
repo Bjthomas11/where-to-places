@@ -192,9 +192,10 @@ function renderUserDashboard(journalEntries) {
         journalEntries
           ? journalEntries
               .map(function(entry) {
-                return ` <li><h5 class="entry-title"><a data-entryid="${
-                  entry.id
-                }">${entry.title}</a></h5>
+                return `
+                  <h5 class="entry-title">
+                    <a data-entryid="${entry.id}">${entry.title}</a>
+                  </h5>
       		 <p class="entry-date">${entry.travelDate}</p>
       		 <div class="entry-list"><img class="main-entry-photo" src="${
              entry.coverPhoto
@@ -206,7 +207,10 @@ function renderUserDashboard(journalEntries) {
       }
 			</ul>
 		</section>	
-	`;
+  `;
+  // <li><h5 class="entry-title"><a data-entryid="${
+  //   entry.id
+  // }">${entry.title}</a></h5>
 }
 
 // create display user profile function with journal entries parameter
@@ -344,11 +348,9 @@ function renderAddEditEntry(entry = null) {
 				<input type="date" name="travel-date" id="travel-date" placeholder="Date of place"
 				${entry ? `value="${entry.travelDate}"` : ""}>
 			</div>
-			<div class="entry-photo" id = "entry-photo">
+      <div class="entry-photo" id = "entry-photo">
 				<input type="text" name="entry-photo" id="main-image" ${
-          entry
-            ? ` value="${entry.coverPhoto}"`
-            : `placeholder="Paste image link"`
+          entry ? ` value="${entry.coverPhoto}"` : `placeholder="Image link"`
         }>
 			</div>
 		</section>
@@ -415,9 +417,9 @@ function renderEachEntry(entry) {
       }">Delete</button>
 		</div>
 		<section class="each-entry">
-			<div class="entry-title">
-				<h5 class="entry-title">${entry.title}</h5>
-			</div>
+      <h5 class="entry-title">
+        <a data-entryid="${entry.id}">${entry.title}</a>
+      </h5>
 			<p class="entry-date">${entry.travelDate}</p>
 			 <div class="entry-list"><img class="main-entry-photo" src="${
          entry.coverPhoto

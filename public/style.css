@@ -191,12 +191,15 @@ hr.style-two {
 }
 
 .entry {
-  background-color: #f2f2f2;
-  height: 400px;
+  background-color: none;
+  height: 150px;
   width: 500px;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 200px;
+  padding-top: 0;
+}
+a.js-edit-entry:hover {
+  color: #245cc4;
 }
 .entry a {
   color: black;
@@ -227,6 +230,7 @@ input#journal-title {
   font-size: 22px;
   border-bottom: 1px solid gray;
   margin-bottom: 45px;
+  background: none;
 }
 input#travel-date {
   width: 600px;
@@ -235,21 +239,15 @@ input#travel-date {
   border-bottom: 1px solid gray;
   margin-bottom: 10px;
   margin-top: 10px;
+  background: none;
 }
 .entry-photo {
-  background-color: #f2f2f2;
-  height: 400px;
-  width: 600px;
+  width: 70%;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 150px;
-  margin-bottom: 15px;
-  padding-left: 10px;
-  padding-right: 10px;
+  border-radius: 5px;
 }
-input#journal-description,
-input#entry-best-memory,
-input#entry-foreign-words {
+input#journal-description {
   width: 600px;
   height: 75px;
   margin-bottom: 15px;
@@ -257,11 +255,9 @@ input#entry-foreign-words {
   border-bottom: 1px solid gray;
 }
 input#main-image {
-  width: 80%;
-}
-.main-image-a {
-  font-size: 16px;
-  text-transform: none;
+  width: 70%;
+  height: auto;
+  border-radius: 5px;
 }
 .save,
 .cancel,
@@ -288,18 +284,17 @@ h5 a {
 div.entry-description {
   margin-top: 219px;
 }
-input#morePhotos-0,
-input#morePhotos-1,
-input#morePhotos-2 {
-  display: block;
-  margin-bottom: 20px;
-  width: 500px;
-}
 #js-save-button,
 #js-cancel-button,
 #js-edit-button,
 #js-delete-button {
-  background-color: white;
+  background: none;
+}
+#js-save-button,
+#js-cancel-button,
+#js-edit-button,
+#js-delete-button:hover {
+  color: #245cc4;
 }
 #js-save-button,
 #js-edit-button {
@@ -327,21 +322,19 @@ input#morePhotos-2 {
 }
 .main-photo {
   max-width: 100%;
-  /*object-fit: contain;*/
   height: 400px;
+  border-radius: 5px;
 }
 .main-entry-photo {
-  height: 400px;
-  width: 600px;
+  height: auto;
+  width: 30%;
   margin-left: auto;
   margin-right: auto;
   padding-top: 0px;
   margin-bottom: 15px;
+  border-radius: 5px;
 }
-.main-entry-description,
-.main-best-memory,
-.main-foreign-words,
-div.more-photos {
+.main-entry-description {
   margin-top: 83px;
   width: 600px;
   margin-left: auto;
@@ -355,17 +348,6 @@ h5 {
   font-size: 17px;
   font-style: italic;
 }
-img.more-photos {
-  width: 600px;
-  margin-bottom: 40px;
-}
-.plus {
-  font-size: 25px;
-  font-weight: 800;
-}
-div.more-photos {
-  margin-bottom: 70px;
-}
 
 /*List of entries */
 .entry-date {
@@ -375,13 +357,6 @@ div.more-photos {
   width: 600px;
   font-style: italic;
   margin-top: -31px;
-}
-
-div.best-memory,
-div.foreign-words {
-  width: 600px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 /* Back to top */
@@ -501,7 +476,7 @@ div.scrolltop {
     background-size: 213%;
   }
   .img-container img {
-    width: 93%;
+    width: 70%;
   }
   .main-title {
     padding-top: 28%;
@@ -554,7 +529,7 @@ div.scrolltop {
     font-size: 10px;
   }
   div.entry {
-    height: 200px;
+    height: 150px;
     width: 90%;
     padding-top: 30px;
     background: none;
@@ -569,7 +544,7 @@ div.scrolltop {
     margin-top: 2px;
   }
   img.main-entry-photo {
-    width: 90%;
+    width: 30%;
     height: auto;
     margin-top: 0;
   }
@@ -582,38 +557,29 @@ div.scrolltop {
   #js-delete-button {
     background: none;
   }
-  #entry-photo {
-    width: 90%;
-    height: 262px;
-    padding-top: 78px;
+  #js-save-button,
+  #js-cancel-button,
+  #js-edit-button,
+  #js-delete-button:hover {
+    color: #245cc4;
   }
-  div.entry-title {
+  section.trip-entries h5.entry-title,
+  section.each-entry h5.entry-title {
     width: 90%;
+  }
+  h5 > a {
+    text-transform: capitalize;
     font-size: 20px;
-    margin-top: 1px;
   }
-  div.entry-date {
+  h5 > a:hover {
+    color: #245cc4;
+  }
+  .entry-date {
     width: 90%;
     font-size: 18px;
-  }
-  div.entry-description {
-    margin-top: 99px;
+    font-weight: 600;
   }
   p.entry-date {
-    width: 90%;
-  }
-  div.main-entry-description,
-  div.main-best-memory,
-  div.main-foreign-words,
-  div.more-photos {
-    margin-top: 32px;
-    width: 90%;
-  }
-  div.more-photos img.more-photos {
-    width: 90%;
-    text-align: center;
-  }
-  .each-entry div.more-photos {
     width: 90%;
   }
 }
@@ -623,14 +589,52 @@ div.scrolltop {
   div.nav-link {
     width: 35%;
   }
+  h5 > a {
+    text-transform: capitalize;
+    font-size: 20px;
+  }
+  h5 > a:hover {
+    color: #245cc4;
+  }
+  .entry {
+    height: 0;
+  }
+  .entry-date {
+    font-size: 18px;
+    font-weight: 600;
+  }
   .description-title {
-    height: 424px;
-    background-size: 156%;
+    height: 350px;
+  }
+  div.entry {
+    background: none;
+    padding: 20px;
   }
   h2.main-title {
     padding-top: 121px;
   }
   div.nav-link {
     width: 28%;
+  }
+  img.main-entry-photo {
+    height: auto;
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #js-save-button,
+  #js-cancel-button,
+  #js-edit-button,
+  #js-delete-button {
+    background: none;
+  }
+  #js-save-button,
+  #js-cancel-button,
+  #js-edit-button,
+  #js-delete-button:hover {
+    color: #245cc4;
+  }
+  a.js-edit-entry:hover {
+    color: #245cc4;
   }
 }
