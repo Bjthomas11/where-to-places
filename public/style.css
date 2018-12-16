@@ -223,21 +223,26 @@ ul {
   text-align: center;
 }
 input#journal-title {
-  width: 600px;
+  width: 450px;
   border: none;
   font-size: 22px;
-  border-bottom: 1px solid gray;
+  border-bottom: 2px solid gray;
   margin-bottom: 45px;
   background: none;
+  text-align: center;
+}
+input#journal-title::placeholder {
+  color: #000;
 }
 input#travel-date {
-  width: 600px;
+  width: 450px;
   border: none;
-  font-size: 15px;
-  border-bottom: 1px solid gray;
+  font-size: 20px;
+  border-bottom: 2px solid gray;
   margin-bottom: 10px;
   margin-top: 10px;
   background: none;
+  text-align: center;
 }
 .entry-photo {
   width: 70%;
@@ -245,17 +250,13 @@ input#travel-date {
   margin-right: auto;
   border-radius: 5px;
 }
-input#journal-description {
-  width: 600px;
-  height: 75px;
-  margin-bottom: 15px;
-  border: none;
-  border-bottom: 1px solid gray;
-}
 input#main-image {
-  width: 70%;
-  height: auto;
+  text-align: center;
+  width: 450px;
+  height: 35px;
   border-radius: 5px;
+  border: 2px solid #245cc2;
+  background: none;
 }
 .save,
 .cancel,
@@ -393,15 +394,15 @@ div.scrolltop {
   input[type="password"]:focus {
     width: 45%;
   }
-  input#journal-title,
-  input#travel-date,
   #js-edit-form {
     width: 100%;
     text-align: center;
   }
   input#journal-title,
-  input#travel-date {
+  input#travel-date,
+  input#main-image {
     width: 50%;
+    text-align: center;
   }
   section.edit-entry {
     margin-top: 112px;
@@ -512,6 +513,10 @@ div.scrolltop {
   #js-delete-button {
     background: none;
   }
+  /* #js-edit-button,
+  #js-delete-button {
+    position: absolute;
+  } */
   #js-save-button,
   #js-cancel-button,
   #js-edit-button,
@@ -591,6 +596,11 @@ div.scrolltop {
   }
   a.js-edit-entry:hover {
     color: #245cc4;
+  }
+  input#journal-title,
+  input#travel-date,
+  input#main-image {
+    text-align: center;
   }
 }
 .home-button {

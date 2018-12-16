@@ -358,7 +358,9 @@ function renderAddEditEntry(entry = null) {
 			</div>
       <div class="entry-photo" id = "entry-photo">
 				<input type="text" name="entry-photo" id="main-image" ${
-          entry ? ` value="${entry.coverPhoto}"` : `placeholder="Image link"`
+          entry
+            ? ` value="${entry.coverPhoto}"`
+            : `placeholder="Paste Image Link"`
         }>
 			</div>
 		</section>
