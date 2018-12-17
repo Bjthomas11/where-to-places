@@ -542,6 +542,9 @@ div.scrolltop {
   p.entry-date {
     width: 90%;
   }
+  div.edit-delete {
+    margin-top: 10px;
+  }
 }
 
 /*MEDIUM SIZE SCREENS*/
