@@ -40,7 +40,7 @@ app.use("*", function(req, res) {
 });
 
 // RUN / CLOSE SERVER
-express().listen(PORT, () => console.log(`Listening on ${PORT}`));
+// express().listen(PORT, () => console.log(`Listening on ${PORT}`));
 
 let server;
 
