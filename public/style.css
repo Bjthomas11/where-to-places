@@ -3,17 +3,20 @@
 }
 body {
   margin: 0;
-}
-.container {
   background: url(img/landing-page.jpeg) no-repeat center;
-  background-size: 100%;
-}
-.inner-container {
-  /* background: url(img/landing-page.jpeg) no-repeat center; */
-  margin: 0;
   background-size: 100%;
   background-attachment: fixed;
 }
+/* .container {
+  background: url(img/landing-page.jpeg) no-repeat center;
+  background-size: 100%;
+} */
+/* .inner-container {
+  background: url(img/landing-page.jpeg) no-repeat center;
+  margin: 0;
+  background-size: 100%;
+  background-attachment: fixed;
+} */
 /* HEADER*/
 h1 {
   text-transform: capitalize;
@@ -225,7 +228,7 @@ ul {
 input#journal-title {
   width: 450px;
   border: none;
-  font-size: 22px;
+  font-size: 20px;
   border-bottom: 2px solid gray;
   margin-bottom: 45px;
   background: none;
@@ -314,7 +317,7 @@ div.entry-description {
   width: 600px;
   margin-left: auto;
   margin-right: auto;
-  text-align: left;
+  text-align: center;
   font-size: 22px;
   font-style: italic;
   margin-top: 58px;
@@ -597,6 +600,10 @@ div.scrolltop {
   #js-delete-button:hover {
     color: #245cc4;
   }
+  /* div.entry {
+    margin-left: auto;
+    margin-right: auto;
+  } */
   a.js-edit-entry:hover {
     color: #245cc4;
   }
@@ -606,6 +613,7 @@ div.scrolltop {
     text-align: center;
   }
 }
+
 .home-button {
   position: absolute;
   top: 5px;
@@ -613,7 +621,7 @@ div.scrolltop {
   z-index: 100;
 }
 div.home-button a {
-  color: #c7a688;
+  color: #947b64;
   font-size: 22px;
 }
 .fa-home {

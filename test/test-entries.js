@@ -20,10 +20,6 @@ function generateJournalEntries() {
     title: faker.address.country(),
     travelDate: faker.date.month(),
     coverPhoto: faker.image.imageUrl(),
-    description: faker.lorem.paragraph(),
-    memories: faker.lorem.sentence(),
-    words: faker.lorem.words(),
-    morePhotos: [faker.image.imageUrl(), faker.image.imageUrl()],
     username
   };
 }
@@ -43,7 +39,7 @@ function tearDownDb() {
   console.warn("Deleting database");
   return mongoose.connection.dropDatabase();
 }
-const username = "Anna";
+const username = "Brian";
 const password = "123";
 let jwt;
 
@@ -118,11 +114,7 @@ describe("Journal entries API resource", function() {
               "id",
               "title",
               "travelDate",
-              "coverPhoto",
-              "description",
-              "memories",
-              "words",
-              "morePhotos"
+              "coverPhoto"
             );
           });
           resEntry = res.body.entries[0];
@@ -132,10 +124,6 @@ describe("Journal entries API resource", function() {
           expect(resEntry.id).to.equal(entry.id);
           expect(resEntry.title).to.equal(entry.title);
           expect(resEntry.coverPhoto).to.equal(entry.coverPhoto);
-          expect(resEntry.description).to.equal(entry.description);
-          expect(resEntry.memories).to.equal(entry.memories);
-          expect(resEntry.words).to.equal(entry.words);
-          expect(resEntry.morePhotos[0]).to.equal(entry.morePhotos[0]);
         });
     });
 
@@ -176,30 +164,18 @@ describe("Journal entries API resource", function() {
             "id",
             "title",
             "travelDate",
-            "coverPhoto",
-            "description",
-            "memories",
-            "words",
-            "morePhotos"
+            "coverPhoto"
           );
           expect(res.body.title).to.equal(newEntry.title);
           expect(res.body.id).to.not.be.null;
           expect(res.body.travelDate).to.equal(newEntry.travelDate);
           expect(res.body.coverPhoto).to.equal(newEntry.coverPhoto);
-          expect(res.body.description).to.equal(newEntry.description);
-          expect(res.body.memories).to.equal(newEntry.memories);
-          expect(res.body.words).to.equal(newEntry.words);
-          expect(res.body.morePhotos[0]).to.equal(newEntry.morePhotos[0]);
           return Entry.findById(res.body.id);
         })
         .then(function(entry) {
           expect(entry.title).to.equal(newEntry.title);
           expect(entry.travelDate).to.equal(newEntry.travelDate);
           expect(entry.coverPhoto).to.equal(newEntry.coverPhoto);
-          expect(entry.description).to.equal(newEntry.description);
-          expect(entry.memories).to.equal(newEntry.memories);
-          expect(entry.words).to.equal(newEntry.words);
-          expect(entry.morePhotos[0]).to.equal(newEntry.morePhotos[0]);
         });
     });
   });
@@ -233,7 +209,6 @@ describe("Journal entries API resource", function() {
         })
         .then(function(entry) {
           expect(entry.title).to.equal(updateData.title);
-          expect(entry.description).to.equal(updateData.description);
         });
     });
   });
