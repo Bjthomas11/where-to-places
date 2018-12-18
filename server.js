@@ -5,7 +5,9 @@ const mongoose = require("mongoose");
 mongoose.Promise = global.Promise;
 const passport = require("passport");
 
-const { PORT, DATABASE_URL } = require("./config");
+const { DATABASE_URL } = require("./config");
+
+const port = process.env.PORT || 8080;
 
 const app = express();
 
@@ -44,7 +46,7 @@ app.use("*", function(req, res) {
 
 let server;
 
-function runServer(databaseUrl, port = PORT) {
+function runServer(databaseUrl, port) {
   return new Promise((resolve, reject) => {
     mongoose.connect(
       databaseUrl,
