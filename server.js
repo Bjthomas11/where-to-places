@@ -41,7 +41,7 @@ app.use("*", function(req, res) {
 
 // RUN / CLOSE SERVER
 
-let server;
+let server = app;
 
 function runServer(databaseUrl) {
   return new Promise((resolve, reject) => {
@@ -51,8 +51,7 @@ function runServer(databaseUrl) {
         if (err) {
           return reject(err);
         }
-        server = app.listen(process.env.PORT || 8080);
-        resolve().on("error", err => {
+        app.listen(process.env.PORT || 8080).on("error", err => {
           mongoose.disconnect();
           reject(err);
         });
