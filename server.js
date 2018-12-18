@@ -8,7 +8,6 @@ const passport = require("passport");
 const { PORT, DATABASE_URL } = require("./config");
 
 const app = express();
-const faker = require("faker");
 
 app.use(express.static("public"));
 app.use(morgan("common"));
