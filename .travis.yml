@@ -8,4 +8,4 @@ deploy:
   app: stark-spire-27149
   skip_cleanup: true
   on:
-    repo: Bjthomas11/workout-app
+    repo: Bjthomas11/where-to-places
