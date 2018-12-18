@@ -51,10 +51,15 @@ function runServer(databaseUrl, PORT) {
         if (err) {
           return reject(err);
         }
-        server = app.listen(process.env.PORT || 8080).on("error", err => {
-          mongoose.disconnect();
-          reject(err);
-        });
+        server = app
+          .listen(process.env.PORT || 8080, () => {
+            console.log(`Your app is listening on port ${PORT}`);
+            resolve();
+          })
+          .on("error", err => {
+            mongoose.disconnect();
+            reject(err);
+          });
       }
     );
   });
