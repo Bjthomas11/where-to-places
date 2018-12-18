@@ -4,7 +4,7 @@
 body {
   margin: 0;
   background: url(img/landing-page.jpeg) no-repeat center;
-  background-size: 100%;
+  background-size: cover;
   background-attachment: fixed;
 }
 /* .container {
@@ -138,7 +138,7 @@ input[type="email"],
 input[type="password"] {
   -webkit-transition: width 0.4s ease-in-out;
 }
-input[type="email"],
+input[type="email"]:focus,
 input[type="password"]:focus {
   width: 45%;
 }
@@ -204,7 +204,7 @@ a.js-edit-entry:hover {
 }
 .entry a {
   color: black;
-  font-size: 38px;
+  font-size: 28px;
   text-decoration: none;
   border-bottom: 1px solid black;
   text-transform: uppercase;
@@ -218,6 +218,7 @@ h4 {
   font-size: 23px;
 }
 ul {
+  padding-left: 0;
   list-style-type: none;
 }
 
@@ -292,9 +293,9 @@ div.entry-description {
 #js-delete-button {
   background: none;
 }
-#js-save-button,
-#js-cancel-button,
-#js-edit-button,
+#js-save-button:hover,
+#js-cancel-button:hover,
+#js-edit-button:hover,
 #js-delete-button:hover {
   color: #245cc4;
 }
@@ -314,7 +315,7 @@ div.entry-description {
   text-align: center;
 }
 .entry-title {
-  width: 600px;
+  width: 80%;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
@@ -338,7 +339,7 @@ div.entry-description {
 }
 .main-entry-description {
   margin-top: 83px;
-  width: 600px;
+  width: 80%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -357,7 +358,7 @@ h5 {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
-  width: 600px;
+  width: 80%;
   font-size: 30px;
   margin-top: -31px;
 }
@@ -393,7 +394,7 @@ div.scrolltop {
   input[type="password"] {
     -webkit-transition: width 0.4s ease-in-out;
   }
-  input[type="email"],
+  input[type="email"]:focus,
   input[type="password"]:focus {
     width: 45%;
   }
@@ -520,9 +521,9 @@ div.scrolltop {
   #js-delete-button {
     position: absolute;
   } */
-  #js-save-button,
-  #js-cancel-button,
-  #js-edit-button,
+  #js-save-button:hover,
+  #js-cancel-button:hover,
+  #js-edit-button:hover,
   #js-delete-button:hover {
     color: #245cc4;
   }
@@ -642,6 +643,11 @@ div.home-button a {
   -webkit-animation: bounce 1.5s infinite;
   -moz-animation: bounce 1.5s infinite;
   -o-animation: bounce 1.5s infinite;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
 }
 
 @keyframes fadeInOpacity {

@@ -44,8 +44,8 @@ function renderLoginPage() {
 				    </div>
 				    <p id='notification'></p>
 					<label for="email" required>Email</label>
-					<input type="email" name="email" id="email" placeholder="Email address" required="">
-					<label for="password" required>Password</label>
+					<input type="email" name="email" id="email" placeholder="Email address" required>
+					<label for="password">Password</label>
 					<input type="password" name="password" id="password" placeholder="Password" required>
 				</fieldset>
 				<button type="submit" class="js-login-button">Login</button>
@@ -60,6 +60,7 @@ function displayLoginPage() {
   const loginPage = renderLoginPage();
   // select main page id and display html from render login page function
   $("#main-page").html(loginPage);
+  $("#email").blur();
   // select landing page class and prop method with hidden class = true
   $(".landing-page").prop("hidden", true);
 }
@@ -163,7 +164,7 @@ function handleSignUpSuccess() {
         //if the call is failing
         .fail(function(err) {
           console.error(err);
-          alert(`Sign up error: ${err.responseJSON.message}`);
+          alert("Sign up error:");
         });
     }
   });
