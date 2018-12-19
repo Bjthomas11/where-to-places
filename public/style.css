@@ -262,6 +262,10 @@ input#main-image {
   border: 2px solid #245cc2;
   background: none;
 }
+input#main-image::placeholder {
+  color: #000;
+  font-weight: 300;
+}
 .save,
 .cancel,
 .edit,
@@ -595,9 +599,9 @@ div.scrolltop {
   #js-delete-button {
     background: none;
   }
-  #js-save-button,
-  #js-cancel-button,
-  #js-edit-button,
+  #js-save-button:hover,
+  #js-cancel-button:hover,
+  #js-edit-button:hover,
   #js-delete-button:hover {
     color: #245cc4;
   }
