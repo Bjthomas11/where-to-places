@@ -13,6 +13,28 @@ Functionality includes:
 <li>Every user can create an account that stores unique information just for that user</li>
 <li>Then the user logs in and can add a places, update the places, and delete places</li>
 
+# Screenshots
+
+### Landing Page
+
+![LandingPage](src/img/landingPage.png)
+
+### LogIn
+
+![LogIn](src/img/login.png)
+
+### SignUp
+
+![Signup](src/img/signup.png)
+
+### Travel Places Dashboard
+
+![Travel Places Dashboard](src/img/MainDashboard.png)
+
+### Add/Edit/Delete Travel Places
+
+![Add/Edit/Delete Travel Places](src/img/EditTravelPlace.png)
+
 # Technology Built With
 
 # Front End
