@@ -17,23 +17,23 @@ Functionality includes:
 
 ### Landing Page
 
-![LandingPage](src/img/landingPage.png)
+![LandingPage](public/img/landingPage.png)
 
 ### LogIn
 
-![LogIn](src/img/login.png)
+![LogIn](public/img/login.png)
 
 ### SignUp
 
-![Signup](src/img/signup.png)
+![Signup](public/img/signup.png)
 
 ### Travel Places Dashboard
 
-![Travel Places Dashboard](src/img/MainDashboard.png)
+![Travel Places Dashboard](public/img/MainDashboard.png)
 
 ### Add/Edit/Delete Travel Places
 
-![Add/Edit/Delete Travel Places](src/img/EditTravelPlace.png)
+![Add/Edit/Delete Travel Places](public/img/EditTravelPlace.png)
 
 # Technology Built With
 
