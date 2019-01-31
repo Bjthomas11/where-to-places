@@ -3,7 +3,7 @@
 }
 body {
   margin: 0;
-  background: url(img/landing-page.jpeg) no-repeat center;
+  background: url("img/main-image.jpg") no-repeat center;
   background-size: cover;
   background-attachment: fixed;
 }
@@ -39,6 +39,7 @@ h1 {
   text-transform: uppercase;
   line-height: 36px;
   color: black;
+  font-size: 30px;
 }
 .nav-1 a:hover {
   color: #245cc4;
@@ -123,13 +124,14 @@ fieldset {
 
 input[type="email"],
 input[type="password"] {
+  font-weight: bold;
   display: block;
   width: 180px;
   margin: 10px auto 20px auto;
   font-size: 12px;
   border: 2px solid #245cc4;
   border-radius: 4px;
-  background-color: #f2f2f2;
+  background-color: transparent;
   padding: 12px 20px;
   box-sizing: border-box;
   outline: none;
@@ -142,6 +144,12 @@ input[type="email"]:focus,
 input[type="password"]:focus {
   width: 45%;
 }
+
+::placeholder {
+  color: #333;
+  font-weight: bold;
+}
+
 label {
   font-size: 18px;
 }
@@ -439,7 +447,7 @@ div.scrolltop {
     padding-top: 28%;
     font-weight: 600;
     text-transform: capitalize;
-    color: #474646;
+    color: #333;
     font-size: 20px;
   }
   .signup-button {
@@ -619,6 +627,10 @@ div.scrolltop {
   }
 }
 
+footer p {
+  color: #fff;
+}
+
 .home-button {
   position: absolute;
   top: 5px;
@@ -626,7 +638,7 @@ div.scrolltop {
   z-index: 100;
 }
 div.home-button a {
-  color: #947b64;
+  color: #245cc4;
   font-size: 22px;
 }
 .fa-home {

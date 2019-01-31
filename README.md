@@ -29,11 +29,11 @@ Functionality includes:
 
 ### Travel Places Dashboard
 
-![Travel Places Dashboard](public/img/MainDashboard.png)
+![Travel Places Dashboard](public/img/placesProfile.png)
 
 ### Add/Edit/Delete Travel Places
 
-![Add/Edit/Delete Travel Places](public/img/EditTravelPlace.png)
+![Add/Edit/Delete Travel Places](public/img/edit.png)
 
 # Technology Built With
 
