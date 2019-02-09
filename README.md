@@ -17,7 +17,7 @@ Functionality includes:
 
 ### Landing Page
 
-![LandingPage](public/img/landing.png)
+![LandingPage](public/img/landingPage.png)
 
 ### LogIn
 
