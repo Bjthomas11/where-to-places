@@ -23,7 +23,7 @@ Functionality includes:
 
 ![LogIn](public/img/login.png)
 
-### SignUp
+### SignUp`
 
 ![Signup](public/img/signup.png)
 
