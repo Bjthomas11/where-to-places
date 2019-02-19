@@ -22,8 +22,9 @@ h1 {
   text-transform: capitalize;
   text-align: center;
   color: #474646;
-  margin-top: 0px;
+  margin-top: 10px;
   margin-bottom: 0px;
+  font-size: 60px;
 }
 
 /*NAVIGATION BAR */
@@ -39,7 +40,7 @@ h1 {
   text-transform: uppercase;
   line-height: 36px;
   color: black;
-  font-size: 30px;
+  font-size: 20px;
 }
 .nav-1 a:hover {
   color: #245cc4;
@@ -51,7 +52,6 @@ h1 {
   font-size: 1em;
   width: 20%;
 }
-/* description-title */
 .description-title {
   height: 734px;
   background-size: 100%;
@@ -384,7 +384,7 @@ div.scrolltop {
 /* SMALLER SCREENS */
 @media only screen and (max-width: 560px) {
   h1 {
-    font-size: 25px;
+    font-size: 40px;
   }
   h2 {
     font-size: 20px;
@@ -430,7 +430,6 @@ div.scrolltop {
   .nav-link {
     border-left: none;
     height: 36px;
-    font-size: 1em;
     width: 49%;
   }
   .nav-2 {
