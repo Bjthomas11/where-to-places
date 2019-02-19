@@ -2,8 +2,9 @@
   box-sizing: border-box;
 }
 body {
+  font-family: "Carter One", cursive;
   margin: 0;
-  background: url("img/main-image.jpg") no-repeat center;
+  background: url(img/main-photo.jpeg) no-repeat center;
   background-size: cover;
   background-attachment: fixed;
 }
@@ -21,7 +22,7 @@ body {
 h1 {
   text-transform: capitalize;
   text-align: center;
-  color: #474646;
+  color: #000;
   margin-top: 10px;
   margin-bottom: 0px;
   font-size: 60px;
@@ -66,13 +67,13 @@ h1 {
 }
 .main-title {
   text-transform: capitalize;
-  color: #474646;
+  color: #000;
   padding-top: 150px;
   font-size: 40px;
   font-weight: 800;
 }
 .signup-button {
-  border: 1px #474646 solid;
+  border: 1px #000 solid;
   width: 209px;
   margin-left: auto;
   margin-right: auto;
@@ -82,7 +83,7 @@ h1 {
 .signup-button a {
   text-decoration: none;
   font-size: 30px;
-  color: #474646;
+  color: #000;
   text-transform: capitalize;
 }
 .signup-button a:hover {
@@ -131,7 +132,7 @@ input[type="password"] {
   font-size: 12px;
   border: 2px solid #245cc4;
   border-radius: 4px;
-  background-color: transparent;
+  /* background-color: transparent; */
   padding: 12px 20px;
   box-sizing: border-box;
   outline: none;
@@ -183,6 +184,15 @@ hr.style-two {
   font-size: 20px;
   color: #e60000;
   margin: 0 10px 0 10px;
+}
+a.nav-signup,
+a.nav-login {
+  color: #000;
+}
+a.nav-signup:hover,
+a.nav-login:hover {
+  color: #245cc4;
+  text-decoration: underline;
 }
 
 /* USER DASHBOARD*/
@@ -382,7 +392,7 @@ div.scrolltop {
 }
 
 /* SMALLER SCREENS */
-@media only screen and (max-width: 560px) {
+@media only screen and (max-width: 750px) {
   h1 {
     font-size: 40px;
   }
@@ -450,7 +460,7 @@ div.scrolltop {
     font-size: 20px;
   }
   .signup-button {
-    border: 1px #474646 solid;
+    border: 1px #000 solid;
     width: 180px;
     margin-left: auto;
     margin-right: auto;
@@ -460,7 +470,7 @@ div.scrolltop {
   .signup-button a {
     text-decoration: none;
     font-size: 18px;
-    color: #474646;
+    color: #000;
     text-transform: capitalize;
   }
   .signup-button a:hover {
@@ -560,6 +570,9 @@ div.scrolltop {
   div.edit-delete {
     margin-top: 10px;
   }
+  footer p {
+    font-size: 10px;
+  }
 }
 
 /*MEDIUM SIZE SCREENS*/
@@ -627,7 +640,8 @@ div.scrolltop {
 }
 
 footer p {
-  color: #fff;
+  margin-left: 20px;
+  color: #000;
 }
 
 .home-button {
@@ -641,10 +655,13 @@ div.home-button a {
   font-size: 22px;
 }
 .fa-home {
+  margin-top: 20px;
+  margin-left: 10px;
   font-size: 30px;
 }
 .fa-github {
-  color: #245cc4;
+  margin-left: 12px;
+  color: #000;
   font-size: 30px;
 }
 .fa-github:hover {

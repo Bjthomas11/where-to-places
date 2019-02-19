@@ -49,7 +49,11 @@ function renderLoginPage() {
 					<input type="password" name="password" id="password" placeholder="Password" required>
 				</fieldset>
 				<button type="submit" class="js-login-button">Login</button>
-				<p>Don't have an account? <a href="#" class ="nav-signup">Sign up</a></p>
+        <p>Don't have an account? <a href="#" class ="nav-signup">Sign up</a>
+        </p>
+        <p id="demo-note">Demo Account:
+        <br>Email: test@gmail.com
+        <br>Password: testing123</p>
 			</form>
 		</section> `;
 }
@@ -96,7 +100,7 @@ function renderSignupPage() {
 					<input type="password" name="password" id="password-confirm" placeholder="Confirm password" required >
 				</fieldset>
 				<button type="submit" class="js-signup-button">Sign up</button>
-				<p>Already have an account? <a href="#" class="nav-login">Log in</p></a>
+        <p>Already have an account? <a href="#" class="nav-login">Log in</p></a>
 			</form>
 		</section>
 	`;
