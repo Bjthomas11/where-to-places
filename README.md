@@ -13,6 +13,12 @@ Functionality includes:
 <li>Every user can create an account that stores unique information just for that user</li>
 <li>Then the user logs in and can add a places, update the places, and delete places</li>
 
+## Demo
+
+Demo Account:
+Email: test@gmail.com
+Password: testing123
+
 # Screenshots
 
 ### Landing Page
