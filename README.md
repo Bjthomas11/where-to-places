@@ -35,11 +35,11 @@ Password: testing123
 
 ### Travel Places Dashboard
 
-![Travel Places Dashboard](public/img/placesProfile.png)
+![Travel Places Dashboard](public/img/profile.png)
 
 ### Add/Edit/Delete Travel Places
 
-![Add/Edit/Delete Travel Places](public/img/edit.png)
+![Add/Edit/Delete Travel Places](public/img/addProfile.png)
 
 # Technology Built With
 
